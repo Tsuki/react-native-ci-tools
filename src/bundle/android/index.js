@@ -19,10 +19,10 @@ const processUpdates = (payload, strategy) =>
             }))
     }).then(androidValidProjectPath => Promise.all([
         stringsProcessor.process(androidValidProjectPath, payload, strategy), // process android strings file
-        manifestProcessor.process(androidValidProjectPath, payload, strategy), // process android manifest file
+        //manifestProcessor.process(androidValidProjectPath, payload, strategy), // process android manifest file
         gradleProcessor.process(androidValidProjectPath, payload, strategy), // process android gradle file
-        mainAppProcessor.process(androidValidProjectPath, payload, strategy), // process android Main App file
-        mainActivityProcessor.process(androidValidProjectPath, payload, strategy), // process android Main App file
+        //mainAppProcessor.process(androidValidProjectPath, payload, strategy), // process android Main App file
+        //mainActivityProcessor.process(androidValidProjectPath, payload, strategy), // process android Main App file
     ])).catch(error => {
         strategy.utils.log.error(error);
         throw error;
