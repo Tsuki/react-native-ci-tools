@@ -1,6 +1,6 @@
 const fileSystem = require('fs');
 const globber = require("glob")
-const plistParser = require('plist');
+const plistParser = require('readplist');
 const program = require('commander');
 const xml2js = require('xml2js');
 
