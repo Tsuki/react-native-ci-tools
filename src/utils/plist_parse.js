@@ -12,6 +12,7 @@ module.exports = (plist, fileObj) => new Promise((resolve, reject) => {
             content: plist.parse(fileObj.content)
         });
     } catch (parseOrReadError) {
-        reject(parseOrReadError);
+        // Cannot parse binary plist
+        // reject(parseOrReadError);
     }
 });
